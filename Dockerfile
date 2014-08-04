@@ -6,8 +6,10 @@ RUN apt-get -qqy install python-software-properties build-essential wget git
 RUN apt-get -qqy install ruby ruby-dev python-dev python-pip libevent-dev libzmq-dev libsqlite3-dev
 RUN pip install --upgrade pip
 RUN git clone https://github.com/outcastgeek/pyramid_and_zmq_on_docker /root/pyramid_and_zmq_on_docker
-RUN cd /root/pyramid_and_zmq_on_docker
-RUN pip install -r /root/pyramid_and_zmq_on_docker/requirements.txt
+WORKDIR /root/pyramid_and_zmq_on_docker
+RUN pip install -r requirements.txt
 RUN initialize_pazod_db development.ini
 RUN pserve development.ini
+EXPOSE 6543
+RUN foreman start
 
