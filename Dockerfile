@@ -7,5 +7,7 @@ RUN apt-get -qqy install ruby ruby-dev python-dev python-pip libevent-dev libzmq
 RUN pip install --upgrade pip
 RUN git clone https://github.com/outcastgeek/pyramid_and_zmq_on_docker /root/pyramid_and_zmq_on_docker
 RUN cd /root/pyramid_and_zmq_on_docker
-RUN pip install -r requirements.txt
+RUN pip install -r /root/pyramid_and_zmq_on_docker/requirements.txt
+RUN initialize_pazod_db development.ini
+RUN pserve development.ini
 
