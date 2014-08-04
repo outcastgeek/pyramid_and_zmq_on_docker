@@ -1,0 +1,7 @@
+# requirements
+
+pyramid==1.5.1
+pyramid_jinja2==2.3.3
+pyzmq==14.3.1
+
+
