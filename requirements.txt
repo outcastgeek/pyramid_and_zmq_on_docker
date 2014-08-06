@@ -2,7 +2,17 @@
 
 pyramid==1.5.1
 pyramid_jinja2==2.3.3
+pyramid_beaker==0.8
+pyramid_simpleform==0.6.1
+pyramid_webassets==0.8
+webassets==0.10.1
+pyScss==1.2.0.post3
+gevent==1.0.1
+psycopg2==2.5.3
 pyzmq==14.3.1
+u-msgpack-python==1.6
 pyelasticsearch==0.6.1
+supervisor==3.1.0
+-e git+https://github.com/mailgun/shipper#egg=shipper
 -e .
 

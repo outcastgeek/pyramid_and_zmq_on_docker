@@ -43,5 +43,6 @@ setup(name='pazod',
       main = pazod:main
       [console_scripts]
       initialize_pazod_db = pazod.scripts.initializedb:main
+      run_pazod_services = pazod.scripts.services:main
       """,
       )

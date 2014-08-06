@@ -28,7 +28,7 @@ case $1 in
   run_es) # docker run -d -p 9200:9200 -p 9300:9300 dockerfile/elasticsearch
           # docker run -d -p 9200:9200 -p 9300:9300 -v <data-dir>:/data dockerfile/elasticsearch /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
     docker run -d -p $2:9200 -p $3:9300 outcastgeek/es
-    #docker run -d -p $2 -p $3 -v $4:/data outcastgeek/es /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
+    #docker run -d -p $2:9200 -p $3:9300 -v $4:/data outcastgeek/es /elasticsearch/bin/elasticsearch -Des.config=/data/elasticsearch.yml
     ;;
   build_pg)
     docker build -t outcastgeek/pg $2
