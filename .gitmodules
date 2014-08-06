@@ -1,3 +1,6 @@
 [submodule "elasticsearch"]
 	path = elasticsearch
 	url = https://github.com/dockerfile/elasticsearch.git
+[submodule "docker-postgresql"]
+	path = docker-postgresql
+	url = https://github.com/imanel/docker-postgresql.git
